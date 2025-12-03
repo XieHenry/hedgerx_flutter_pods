@@ -20,7 +20,14 @@ Pod::Spec.new do |s|
   }
 
   # ===== 加载所有 xcframework =====
-  s.vendored_frameworks = '**/*.xcframework'
+  s.vendored_frameworks = [
+  'app.xcframework',
+  'flutter.xcframework',
+  'flutterpluginregistrant.xcframework',
+  'device_info_plus.xcframework',
+  'package_info_plus.xcframework',
+  'webview_flutter_wkwebview.xcframework'
+]
 
   # ===== 作为静态库处理 =====
   s.static_framework = true
