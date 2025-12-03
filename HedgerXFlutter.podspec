@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   }
 
   # ⭐ 关键：避免 CocoaPods 冲突检查
-  s.preserve_paths = '**/*.xcframework'
+  s.preserve_paths = '*.xcframework'
 
   # ⭐ 明确列出所有 xcframework 文件，避免 glob 触发冲突扫描
   s.vendored_frameworks = [
