@@ -11,20 +11,17 @@ Pod::Spec.new do |s|
     :http => 'https://bic-mobile-test.oss-ap-northeast-1.aliyuncs.com/flutter/hedgerx/framework/Release/1.0.1.zip'
   }
 
-  # ⭐ 关键：避免 CocoaPods 冲突检查
-  s.preserve_paths = '*.xcframework'
-
-  # ⭐ 明确列出所有 xcframework 文件，避免 glob 触发冲突扫描
+  # ⭐ 关键：告诉 CocoaPods framework 在 1.0.1 这个子目录
   s.vendored_frameworks = [
-    'app.xcframework',
-    'flutter.xcframework',
-    'flutterpluginregistrant.xcframework',
-    'device_info_plus.xcframework',
-    'package_info_plus.xcframework',
-    'webview_flutter_wkwebview.xcframework'
+    '1.0.1/App.xcframework',
+    '1.0.1/Flutter.xcframework',
+    '1.0.1/FlutterPluginRegistrant.xcframework',
+    '1.0.1/device_info_plus.xcframework',
+    '1.0.1/package_info_plus.xcframework',
+    '1.0.1/webview_flutter_wkwebview.xcframework'
   ]
 
-  s.static_framework = true
   s.requires_arc = true
+  s.static_framework = true
 end
 
