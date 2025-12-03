@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   }
 
   # === 解压的目录 ===
-  s.vendored_frameworks = '1.0.1/*.xcframework'
+  s.vendored_frameworks = '**/*.xcframework'
 
   # Flutter XCFramework 均为静态库
   s.static_framework = true
